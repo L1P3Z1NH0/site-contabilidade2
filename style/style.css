@@ -77,7 +77,7 @@ li {
 .link-header {
     font-family: 'Lato', sans-serif;
     font-size: clamp(1rem, 1rem + 1.85vw, 1.5rem);
-    padding: 1rem;
+    padding: 0 1rem;
     color: #FFF;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
     transition: 0.3s;
@@ -155,8 +155,6 @@ li {
 }
 
 .header-box-button{
-    margin-left: 1rem;
-    margin-right: 1rem;
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
@@ -170,7 +168,7 @@ li {
     font-weight: 700;
     font-family: 'Lato', sans-serif;
     border: none;
-    
+    margin: 0 0.5rem;
     animation-fill-mode: forwards;
 }
 
@@ -490,8 +488,12 @@ footer ul{
     padding: 0;
 }
 
+footer ul li:nth-child(2){
+    grid-column: 3;
+}
+
 footer ul li:last-child{
-    grid-row: 2;
+    grid-row: 1;
     grid-column-start: span 3;
 }
 
@@ -837,7 +839,15 @@ footer a{
     background-image: url(/assets/images/pags-secundarias/certificado-digital/background-certificado.png);
 }
 
+.header-certificado .header-content-title{
+    margin-top: 10rem;
+}
+
 .beneficios img{
+    display: none;
+}
+
+.info-certificados-content{
     display: none;
 }
 
@@ -878,12 +888,12 @@ footer a{
 .comprar{
     background-color: #FFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-    border-radius:5%;
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 1rem;
     gap: 0.5rem;
+    margin-top: 5rem;
 }
 
 .comprar h4, .comprar p{
@@ -894,7 +904,7 @@ footer a{
 .comprar .buy-update{
     grid-column: span 4;
     border-bottom: 1px solid rgba(58, 77, 244, 1);
-    margin: 0 2rem;
+    margin: 0rem;
     display: flex;
     justify-content: space-between;
 }
@@ -906,6 +916,13 @@ footer a{
 .buy-update button a{
     margin: 0 !important;
     color: #000;
+}
+
+.box-comprar-item{
+    grid-column: span 4;
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
 }
 
 .comprar button{
@@ -924,7 +941,7 @@ footer a{
 }
 
 .info-comprar{
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 .info-comprar b{
@@ -975,6 +992,10 @@ footer a{
     border-radius: 0.75rem;
     justify-content: space-between;
     font-size: 0.75rem;
+}
+
+.box-comprar-item label:nth-child(2), .box-comprar-item label:nth-child(4), .box-comprar-item label:nth-child(6){
+    width: 7rem;
 }
 
 .btn-outline-secondary{
@@ -1034,6 +1055,40 @@ color: #FFF;
     margin: 0.75rem 0;
 }
 
+.iframe-container{
+    position:absolute;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: 2rem 315px;
+    background-color: rgb(0, 159, 170, 0.6);
+    width: 100%;
+    height: 100vh;
+}
+
+.iframe-container iframe{
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.iframe-container button{
+    justify-self: end;
+    align-self: flex-end;
+    color: #000;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    height: 100%;
+    border: none;
+}
+
+.iframe-container span{
+    padding: 0.35rem;
+}
+
 @media(min-width: 35em) {
     .nav-content {
         position: fixed;
@@ -1061,6 +1116,10 @@ color: #FFF;
         text-align: center;
         margin-top: 25rem;
         line-height: 6rem;
+    }
+
+    .link-header{
+        padding: 1rem;
     }
 
     .icon-navbar{
@@ -1260,10 +1319,15 @@ color: #FFF;
 
     footer{
         display: grid;
-        grid-template-columns: 1fr 12rem 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .link-image{
+        align-self: center;
+        justify-self: center;
     }
 
     .footer-item{
@@ -1482,6 +1546,10 @@ color: #FFF;
         grid-template-columns: 55% 40%;
     }
 
+    .header-certificado .header-content-title{
+        margin-top: 0;
+    }
+
     .saiba-certificados{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1548,6 +1616,22 @@ color: #FFF;
         grid-row: 1;
     }
 
+    .comprar{
+        border-radius: 5%;
+    }
+
+    .comprar .buy-update{
+        margin: 0 2rem;
+    }
+    
+    .box-comprar-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .box-comprar-item label:nth-child(2), .box-comprar-item label:nth-child(4), .box-comprar-item label:nth-child(6){
+        width:auto;
+    }
 }
 
 @media (max-width: 35em) {
@@ -1569,7 +1653,7 @@ color: #FFF;
         flex-direction: column;
         align-items: flex-start;
         gap: 2em;
-        /* Move 100% da width para o lado direito */
+        justify-content: space-between;
         transform: translateX(100%);
     }
 
