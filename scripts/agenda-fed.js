@@ -9,7 +9,7 @@ function reply_click(clicked_id){
         for (var i = 0; i < itemChange.length; i++) {
             if(idItem == itemChange[i]){
                 document.getElementById("title-change").innerHTML = `Agenda Federal de ${txtChange[i]} de 2022`;
-                document.getElementById("txt-change").innerHTML = `CLIQUE AQUI e faça download da Agenda Tributária Federal de ${txtChange[i]} de 2022.`;
+                document.getElementById("txt-change").innerHTML = `CLIQUE AQUI e visualize a Agenda Tributária Federal de ${txtChange[i]} de 2022.`;
                 if(txtChange[i] == "Março"){
                     txtChange[i] = "Marco"
                 }
