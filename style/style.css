@@ -52,7 +52,7 @@ header ul{
 }
 
 .icon-navbar {
-    width: 10rem;
+    width: 6rem;
     margin: 2rem;
     transition: 0.3s;
 }
@@ -123,7 +123,7 @@ li {
 }
 
 .header-box-txt:first-child{
-    margin-top: 15rem;
+    margin-top: 10rem;
 }
 
 .header-content-txt{
@@ -251,7 +251,7 @@ a:focus{
 }
 
 .img-item a{
-    width: 10rem;
+    width: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -508,6 +508,31 @@ footer a{
     font-family: 'Lato', sans-serif;
     margin: 0 1rem;
 }
+
+
+/*WHATSAPP*/
+.whatsapp-link{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+}
+.fa-whatsapp{
+    margin-top: 16px;
+}
+.fa-whatsapp:before {
+    content: "\f232";
+}
+
+
 
 /* PÁGINAS-SECUNDÁRIAS */
 
@@ -1646,15 +1671,18 @@ color: #FFF;
     }
 
     #primary-navigation {
+        margin: 0;
         z-index: 1000;
         inset: 0 0 0 35%;
-        padding: min(30vh, 15rem) 2em;
+        padding: min(30vh, 10rem) 2em;
         background: hsl(0, 0%, 0%, 0.75);
         flex-direction: column;
         align-items: flex-start;
         gap: 2em;
         justify-content: space-between;
         transform: translateX(100%);
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     #primary-navigation[data-visible="true"] {
